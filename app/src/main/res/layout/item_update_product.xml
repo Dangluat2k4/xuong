@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/khung"
+    >
+    <EditText
+        android:id="@+id/edtUDNamePR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edtUDQuanlityPR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edtUDPricePR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edtUDuserPR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/IBUDIMGPR"
+        android:layout_width="50dp"
+        android:background="@drawable/folder"
+        android:layout_margin="20dp"
+        android:layout_height="50dp"/>
+    <ImageView
+        android:id="@+id/IIMGPR"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="#AF7A7A"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/btnUDUPR"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="update"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

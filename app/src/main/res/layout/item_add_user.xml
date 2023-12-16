@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/edtAddUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Nhập vào tên :"/>
+
+    <EditText
+        android:id="@+id/edtAddPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào tuổi"
+        />
+
+    <EditText
+        android:id="@+id/edtAddNumberPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào số điện thoại"/>
+
+    <EditText
+        android:id="@+id/edtAddPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào vị trí :"
+        />
+    <EditText
+        android:id="@+id/edtAddProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Giới thiệu bản thân :"
+        />
+
+    <EditText
+        android:id="@+id/edtAddLastLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ngày cuối đăng nhập :"
+        />
+
+    <EditText
+        android:id="@+id/edtCreateDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tạo ngày :"
+        />
+    <EditText
+        android:id="@+id/edtAddLastAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ngày cuối hoạt động :"
+        />
+    <ImageButton
+        android:id="@+id/ibAddIMG"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/folder"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        />
+    <ImageView
+        android:id="@+id/addIIMG"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="#E4D8D8"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="update"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
+<!--    //    String userName;// khoa chinh-->
+<!--    //    String password;-->
+<!--    //    String numberPhone;-->
+<!--    //    String position;// chuc vu-->
+<!--    //    byte[] avatar;-->
+<!--    //    String profile;// gioi thieu tom tat-->
+<!--    //    String lastLogin;// lan cuoi dang nhap-->
+<!--    //    String createdDate; // ngay tao tai khoan-->
+<!--    //    String lastAction; // lan cuoi hanh dong tren he thong-->

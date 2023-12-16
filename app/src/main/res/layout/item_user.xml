@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/khung"
+    android:backgroundTint="#FFCACA"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/IBAvatar"
+            android:layout_width="160sp"
+            android:layout_height="160sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="243dp"
+            android:background="@drawable/khung"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.033"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtuser"
+            android:layout_width="235dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/khung"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.692"
+            app:layout_constraintStart_toEndOf="@+id/IBAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtprofile"
+            android:layout_width="235dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtuser"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/khung"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IBAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/txtuser" />
+
+        <TextView
+            android:id="@+id/txtposition"
+            android:layout_width="235dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtprofile"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="-110dp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/khung"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IBAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/txtprofile" />
+
+        <TextView
+            android:id="@+id/txtNumberPhone"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/IBAvatar"
+            android:layout_margin="5sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="-173dp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/khung"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.081"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IBAvatar" />
+
+        <Button
+            android:id="@+id/btnUDUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtposition"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="9dp"
+            android:layout_toEndOf="@+id/txtNumberPhone"
+            android:background="@drawable/baseline_update_24" />
+
+        <Button
+            android:id="@+id/btnDeleteUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtposition"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/delete"
+            android:text="delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toEndOf="@+id/btnUDUser"
+            app:layout_constraintTop_toBottomOf="@+id/txtposition" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

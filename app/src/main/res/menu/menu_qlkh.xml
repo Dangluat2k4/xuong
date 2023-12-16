@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/createUser"
+        android:title="Create user"
+        android:icon="@drawable/user"
+        />
+    <item android:id="@+id/statistic"
+        android:title="thống kê "
+        android:icon="@drawable/trend"
+        />
+    <item android:id="@+id/doanhThu"
+        android:title="doanh thu"
+        android:icon="@drawable/baseline_currency_bitcoin_24"/>
+    <item android:id="@+id/log_out"
+        android:title="Đăng xuất"
+        android:icon="@drawable/people"
+        />
+</menu>
