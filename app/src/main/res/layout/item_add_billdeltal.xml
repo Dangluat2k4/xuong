@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/khung" />
-    <EditText
+    <TextView
         android:id="@+id/edtPriceDT"
         android:layout_width="match_parent"
         android:layout_height="50dp"

@@ -9,11 +9,22 @@ public class Bill {
     String createByUser;// tao boi ai
     String createdDate; // ngay tao hoa don
     String note; // ghi chu
+    String price;
 
     public Bill() {
     }
 
-    public Bill(int id, int productID, String name, String quantity, String createByUser, String createdDate, String note) {
+    public Bill(int productID, String name, String quantity, String createByUser, String createdDate, String note, String price) {
+        this.productID = productID;
+        this.name = name;
+        this.quantity = quantity;
+        this.createByUser = createByUser;
+        this.createdDate = createdDate;
+        this.note = note;
+        this.price = price;
+    }
+
+    public Bill(int id, int productID, String name, String quantity, String createByUser, String createdDate, String note, String price) {
         this.id = id;
         this.productID = productID;
         this.name = name;
@@ -21,6 +32,15 @@ public class Bill {
         this.createByUser = createByUser;
         this.createdDate = createdDate;
         this.note = note;
+        this.price = price;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public Bill(int id, String quantity, String createByUser) {

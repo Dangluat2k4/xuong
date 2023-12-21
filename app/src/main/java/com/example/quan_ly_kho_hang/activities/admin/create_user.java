@@ -42,7 +42,7 @@ public class create_user extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_create_user, container, false);
+        View view = inflater.inflate(R.layout.fragment_create_user, container, false);
         edtDKMK = view.findViewById(R.id.edtDKMK);
         edtDKTK = view.findViewById(R.id.edtDKTK);
         edtDKNLMK = view.findViewById(R.id.edtNLMK);
@@ -56,28 +56,25 @@ public class create_user extends Fragment {
                 String userName = edtDKTK.getText().toString();
                 String password = edtDKMK.getText().toString();
                 String passwordNL = edtDKNLMK.getText().toString();
-                if (TextUtils.isEmpty(tenTT) ) {
+                if (TextUtils.isEmpty(tenTT)) {
                     Toast.makeText(getActivity(), "vui long nhap ten thu thu", Toast.LENGTH_SHORT).show();
-                }else if ( TextUtils.isEmpty(userName)){
+                } else if (TextUtils.isEmpty(userName)) {
                     Toast.makeText(getActivity(), "vui lòng nhập vào mã  thủ thử", Toast.LENGTH_SHORT).show();
-                } else if (TextUtils.isEmpty(password)){
+                } else if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getActivity(), "vui lòng nhập vào mật khẩu", Toast.LENGTH_SHORT).show();
-                }else if (TextUtils.isEmpty(passwordNL)){
+                } else if (TextUtils.isEmpty(passwordNL)) {
                     Toast.makeText(getActivity(), "vui lòng nhập lại mật khẩu", Toast.LENGTH_SHORT).show();
-                }
-                else if (!password.equals(passwordNL)){
+                } else if (!password.equals(passwordNL)) {
                     Toast.makeText(getActivity(), "mật khẩu không trùng khớp", Toast.LENGTH_SHORT).show();
-                }
-
-                else {
+                } else {
                     try {
-                        User user = new User(userName,password);
+                        User user = new User(userName, password);
                         if (userDao.insert(user)) {
                             Toast.makeText(getActivity(), "đăng ký thành công", Toast.LENGTH_SHORT).show();
-                         //   gửi dữ liệu đi
+                            //   gửi dữ liệu đi
 //                            Intent intent = new Intent(create_user.this, login.class);
 //                            startActivity(intent);
-                        }else{
+                        } else {
                             Toast.makeText(getActivity(), "đăng ký thấy bại", Toast.LENGTH_SHORT).show();
                         }
                     } catch (Exception e) {

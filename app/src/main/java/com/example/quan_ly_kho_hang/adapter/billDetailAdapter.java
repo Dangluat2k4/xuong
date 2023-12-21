@@ -20,9 +20,9 @@ import com.example.quan_ly_kho_hang.model.BillDetail;
 
 import java.util.ArrayList;
 
-public class billDetailAdapter extends RecyclerView.Adapter<billDetailAdapter.ViewHolder>{
+public class billDetailAdapter extends RecyclerView.Adapter<billDetailAdapter.ViewHolder> {
     private final Context context;
-    private final ArrayList<BillDetail> list ;
+    private final ArrayList<BillDetail> list;
     billDetailDao billDetailDao;
 
     public billDetailAdapter(Context context, ArrayList<BillDetail> list) {
@@ -41,11 +41,11 @@ public class billDetailAdapter extends RecyclerView.Adapter<billDetailAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.txtIDDT.setText("Mã sản phẩm : "+String.valueOf(list.get(position).getId()) );
-        holder.txtBID.setText("Mã Bill : "+String.valueOf(list.get(position).getBillID()));
-        holder.txtQLTDT.setText("Số lượng sản phẩm : "+list.get(position).getQuantity());
-        holder.txtCRDate.setText("Tạo ngày : "+list.get(position).getCreatedDate());
-        holder.txtPriceDT.setText("Giá :"+ String.valueOf(list.get(position).getPrice()));
+        holder.txtIDDT.setText("Mã sản phẩm : " + String.valueOf(list.get(position).getId()));
+        holder.txtBID.setText("Mã Bill : " + String.valueOf(list.get(position).getBillID()));
+        holder.txtQLTDT.setText("Số lượng sản phẩm : " + list.get(position).getQuantity());
+        holder.txtCRDate.setText("Tạo ngày : " + list.get(position).getCreatedDate());
+        holder.txtPriceDT.setText("Giá :" + String.valueOf(list.get(position).getPrice()));
         BillDetail billDetail = list.get(position);
         holder.btnDeleteDT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,9 +83,10 @@ public class billDetailAdapter extends RecyclerView.Adapter<billDetailAdapter.Vi
         return list.size();
     }
 
-    public  static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtIDDT,txtBID,txtQLTDT,txtCRDate,txtPriceDT;
-        Button btnDeleteDT,btnUDDT;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtIDDT, txtBID, txtQLTDT, txtCRDate, txtPriceDT;
+        Button btnDeleteDT, btnUDDT;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtIDDT = itemView.findViewById(R.id.txtIDDT);
@@ -94,7 +95,6 @@ public class billDetailAdapter extends RecyclerView.Adapter<billDetailAdapter.Vi
             txtCRDate = itemView.findViewById(R.id.txtCRDate);
             txtPriceDT = itemView.findViewById(R.id.txtPriceDT);
             btnDeleteDT = itemView.findViewById(R.id.btnDeleteDT);
-            btnUDDT = itemView.findViewById(R.id.btnUDDT);
         }
     }
 }

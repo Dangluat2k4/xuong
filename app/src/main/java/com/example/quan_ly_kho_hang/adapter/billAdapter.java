@@ -27,11 +27,11 @@ import com.example.quan_ly_kho_hang.model.User;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
-public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder>{
+public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder> {
     private final Context context;
-    private final ArrayList<Bill> list ;
+    private final ArrayList<Bill> list;
     billDao billDao;
-    EditText edtUDProductIDB,edtUDNameB,edtUDQuantityB,edtUDCreateByB,edtUDCreatedDateB,edtUDNoteB;
+    EditText edtUDProductIDB, edtUDNameB, edtUDQuantityB, edtUDCreateByB, edtUDCreatedDateB, edtUDNoteB;
     Button btnUDBill, btnCancel;
 
     public billAdapter(Context context, ArrayList<Bill> list) {
@@ -51,14 +51,14 @@ public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Bill bill = list.get(position);
-        holder.txtCreateBy.setText("ID :"+list.get(position).getCreateByUser());
-        holder.txtNgayTao.setText("Ngày tạo :"+list.get(position).getCreatedDate());
-        holder.txtGhiChu.setText("Ghi Chú :"+list.get(position).getNote());
-   //     holder.txtSoLuong.setText("Số lượng :"+ list.get(position).getQuantity());
+        holder.txtCreateBy.setText("ID :" + list.get(position).getCreateByUser());
+        holder.txtNgayTao.setText("Ngày tạo :" + list.get(position).getCreatedDate());
+        holder.txtGhiChu.setText("Ghi Chú :" + list.get(position).getNote());
+        //     holder.txtSoLuong.setText("Số lượng :"+ list.get(position).getQuantity());
         int sl = Integer.parseInt(list.get(position).getQuantity());
-        if (sl <0){
+        if (sl < 0) {
             holder.txtSoLuong.setText("xuat kho");
-        }else{
+        } else {
             holder.txtSoLuong.setText("nhap kho");
         }
         holder.btnDeleteBill.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +93,7 @@ public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder>{
         holder.btnUpdateBill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            openDiaLogUD(bill);
+                openDiaLogUD(bill);
             }
         });
     }
@@ -103,9 +103,10 @@ public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder>{
         return list.size();
     }
 
-    public  static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtCreateBy,txtSoLuong,txtNgayTao,txtGhiChu;
-        Button btnDeleteBill,btnUpdateBill;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtCreateBy, txtSoLuong, txtNgayTao, txtGhiChu;
+        Button btnDeleteBill, btnUpdateBill;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtCreateBy = itemView.findViewById(R.id.txtCreateBy);
@@ -116,6 +117,7 @@ public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder>{
             btnUpdateBill = itemView.findViewById(R.id.btnUpdateBill);
         }
     }
+
     public void openDiaLogUD(Bill bill) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
@@ -123,7 +125,7 @@ public class billAdapter extends RecyclerView.Adapter<billAdapter.ViewHolder>{
         builder.setView(view);
         Dialog dialog = builder.create();
         dialog.show();
-     //   EditText edtUDProductIDB,edtUDNameB,edtUDQuantityB,edtUDCreateByB,edtUDCreatedDateB,edtUDNoteB;
+        //   EditText edtUDProductIDB,edtUDNameB,edtUDQuantityB,edtUDCreateByB,edtUDCreatedDateB,edtUDNoteB;
         edtUDProductIDB = view.findViewById(R.id.edtUDProductIDB);
         edtUDNameB = view.findViewById(R.id.edtUDNameB);
         edtUDQuantityB = view.findViewById(R.id.edtUDQuantityB);

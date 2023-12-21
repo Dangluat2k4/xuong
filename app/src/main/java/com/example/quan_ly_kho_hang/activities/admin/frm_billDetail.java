@@ -41,9 +41,8 @@ public class frm_billDetail extends Fragment {
     billDetailAdapter adapter;
     billDetailDao detailDao;
     Spinner spnABillDT;
-    TextView txtQuanLityDT, txtCreateDateDT;
+    TextView txtQuanLityDT, txtCreateDateDT,edtPriceDT;
     Button btnABillDT, btnCancel;
-    EditText edtPriceDT;
     private ArrayList<BillDetail> list = new ArrayList<>();
 
     @Override
@@ -115,6 +114,7 @@ public class frm_billDetail extends Fragment {
                 // Hiển thị thông tin lên giao diện
                 txtQuanLityDT.setText(String.valueOf(bill.getQuantity()));
                 txtCreateDateDT.setText(String.valueOf(bill.getCreatedDate()));
+                edtPriceDT.setText(String.valueOf(bill.getPrice()));
             }
 
             @Override
@@ -156,6 +156,7 @@ public class frm_billDetail extends Fragment {
 //            hs.put("name", product.getName());
             hs.put("quantity", bill.getQuantity());
             hs.put("userID", bill.getCreatedDate());
+            hs.put("price",bill.getPrice());
             listHM.add(hs);
         }
         return listHM;

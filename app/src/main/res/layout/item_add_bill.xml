@@ -33,6 +33,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Giá sản phẩm :"/>
+    <TextView
+        android:id="@+id/txtPriceBl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Tạo bởi"
         android:textSize="20dp"
         />

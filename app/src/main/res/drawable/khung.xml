@@ -7,4 +7,5 @@
         android:right="5dp"
         android:top="5dp"
         />
+    <gradient android:startColor="#ffff" android:endColor="#ffff"/>
 </shape>

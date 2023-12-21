@@ -20,17 +20,15 @@ import java.util.ArrayList;
 
 
 public class statisic extends Fragment {
-
     RecyclerView rcvStatisic;
     statisicDao dao;
     statisicAdapter adapter;
     ArrayList<Product> list = new ArrayList<>();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,7 +44,7 @@ public class statisic extends Fragment {
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         rcvStatisic.addItemDecoration(new CustomItemDecoration(getActivity(), spacingInPixels));
 
-        adapter = new statisicAdapter(getActivity(),list);
+        adapter = new statisicAdapter(getActivity(), list);
         rcvStatisic.setAdapter(adapter);
         return view;
     }

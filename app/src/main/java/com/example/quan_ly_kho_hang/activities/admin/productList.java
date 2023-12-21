@@ -158,7 +158,7 @@ public class productList extends Fragment implements OnImageSelectListtenerPR {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
                 // khai bao mang chua du lieu
                 byte[] img = stream.toByteArray();
-                Product product = new Product(namePR, quantityPR, pricePR, img,tenUR);
+                Product product = new Product(namePR, quantityPR, pricePR, img, tenUR);
                 if (TextUtils.isEmpty(namePR) || TextUtils.isEmpty(quantityPR) || TextUtils.isEmpty(pricePR) || TextUtils.isEmpty(tenUR)) {
                     Toast.makeText(getActivity(), "vui long nhap day du thong tin", Toast.LENGTH_SHORT).show();
                 } else if (productDao.insert(product)) {
@@ -182,10 +182,9 @@ public class productList extends Fragment implements OnImageSelectListtenerPR {
             try {
                 InputStream inputStream = getActivity().getContentResolver().openInputStream(uri);
                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                if(!(IIMGPR == null)){
+                if (!(IIMGPR == null)) {
                     IIMGPR.setImageBitmap(bitmap);
-                }
-                else {
+                } else {
                     IAIMGPR.setImageBitmap(bitmap);
                 }
 
@@ -205,6 +204,7 @@ public class productList extends Fragment implements OnImageSelectListtenerPR {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(galleryIntent, RESQUEST_CODE_FORDER);
     }
+
     private ArrayList<HashMap<String, Object>> getDSLS() {
         userDao userDao = new userDao(getContext());
         ArrayList<User> list1 = userDao.selectAll();

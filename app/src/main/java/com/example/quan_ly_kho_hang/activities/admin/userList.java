@@ -42,6 +42,7 @@ import java.util.ArrayList;
 public class userList extends Fragment implements OnImageSelectedListener {
     private ImageView IIMG;
     RecyclerView recyclerView;
+    ;
     FloatingActionButton fltAdd;
     userDao userDao;
     userAdapter adapter;
@@ -51,6 +52,7 @@ public class userList extends Fragment implements OnImageSelectedListener {
     ImageButton ibAddIMG;
     ImageView addIIMG;
     Button btnAddUser;
+
     public void setIIMG(ImageView IIMG) {
         this.IIMG = IIMG;
     }
@@ -71,7 +73,7 @@ public class userList extends Fragment implements OnImageSelectedListener {
         list = userDao.selectAll();
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new userAdapter(getActivity(),list,this);
+        adapter = new userAdapter(getActivity(), list, this);
         // Tạo một đối tượng CustomItemDecoration và thêm nó vào RecyclerView
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         recyclerView.addItemDecoration(new CustomItemDecoration(getActivity(), spacingInPixels));
@@ -167,10 +169,9 @@ public class userList extends Fragment implements OnImageSelectedListener {
 //                } else {
 //                    IIMG.setImageBitmap(bitmap);
 //                }
-                if(!(IIMG == null)){
+                if (!(IIMG == null)) {
                     IIMG.setImageBitmap(bitmap);
-                }
-                else {
+                } else {
                     addIIMG.setImageBitmap(bitmap);
                 }
 
@@ -180,6 +181,7 @@ public class userList extends Fragment implements OnImageSelectedListener {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
     @Override
     public void onImageSelected(User user, ImageView IIMG) {
         if (IIMG == null) {

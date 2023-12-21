@@ -1,71 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/khung"
+    android:background="@drawable/khung1"
     android:backgroundTint="#FDC3C3"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/txtIDDT"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/khung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtIDDT"
-            android:layout_width="390dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/khung" />
+    <TextView
+        android:id="@+id/txtBID"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/khung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtIDDT"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtBID"
-            android:layout_width="390dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/khung" />
+    <TextView
+        android:id="@+id/txtQLTDT"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/khung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIDDT" />
 
-        <TextView
-            android:id="@+id/txtQLTDT"
-            android:layout_width="390dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/khung" />
+    <TextView
+        android:id="@+id/txtCRDate"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/khung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQLTDT" />
 
-        <TextView
-            android:id="@+id/txtCRDate"
-            android:layout_width="390dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/khung" />
-        <TextView
-            android:id="@+id/txtPriceDT"
-            android:layout_width="390dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/khung" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/txtPriceDT"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/khung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCRDate"
+        app:layout_constraintVertical_bias="0.448" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center">
+    <Button
+        android:id="@+id/btnDeleteDT"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/txtPriceDT"
+        app:layout_constraintTop_toBottomOf="@+id/txtCRDate" />
 
-        <Button
-            android:id="@+id/btnDeleteDT"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="50dp"
-            android:background="@drawable/delete" />
+    <!--        <Button-->
+<!--            android:id="@+id/btnUDDT"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/baseline_update_24" />-->
+<!--    -->
 
-        <Button
-            android:id="@+id/btnUDDT"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/baseline_update_24" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

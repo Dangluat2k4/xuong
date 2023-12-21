@@ -51,7 +51,7 @@ public class bill_list extends Fragment {
     EditText edtAProductIDB,edtANameB,edtAQuantityB,edtACreateByB,edtACreatedDateB,edtANoteB;
     Spinner spnMaSP,spnSLSP,spnCreateBy;
     Button btnABill, btnACancel;
-    TextView txtSL,txtCreateBy;
+    TextView txtSL,txtCreateBy,txtPriceBl;
     private ArrayList<Bill> list = new ArrayList<>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -94,6 +94,7 @@ public class bill_list extends Fragment {
         spnMaSP = view.findViewById(R.id.spnMaSP);
         edtACreatedDateB = view.findViewById(R.id.edtACreatedDateB);
         edtANoteB = view.findViewById(R.id.edtANoteB);
+        txtPriceBl = view.findViewById(R.id.txtPriceBl);
         btnABill = view.findViewById(R.id.btnABill);
         btnACancel = view.findViewById(R.id.btnACancel);
         txtSL = view.findViewById(R.id.txtSL);
@@ -128,6 +129,7 @@ public class bill_list extends Fragment {
                 // Hiển thị thông tin lên giao diện
                 txtSL.setText(String.valueOf(product.getQuantity()));
                 txtCreateBy.setText(String.valueOf(product.getUserID()));
+                txtPriceBl.setText(String.valueOf(product.getPrice()));
             }
 
             @Override
@@ -152,6 +154,13 @@ public class bill_list extends Fragment {
                 new String[]{"userID"},
                 new int[]{android.R.id.text1}
         );
+        SimpleAdapter simpleAdapter3 = new SimpleAdapter(
+                getContext(),
+                getPR(),
+                android.R.layout.simple_list_item_1,
+                new String[]{"price"},
+                new int[]{android.R.id.text1}
+        );
         spnMaSP.setAdapter(simpleAdapter);
         btnABill.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,9 +170,10 @@ public class bill_list extends Fragment {
                 String creaateBy = txtCreateBy.getText().toString();
                 String createDate = edtACreatedDateB.getText().toString();
                 String note = edtANoteB.getText().toString();
+                String price = txtPriceBl.getText().toString();
                 HashMap<String, Object> hsLS = (HashMap<String, Object>) spnMaSP.getSelectedItem();
                 int maSP = (int) hsLS.get("id");
-                Bill bill = new Bill (Integer.valueOf(maSP), name, quanlity, creaateBy, createDate, note);
+                Bill bill = new Bill (Integer.valueOf(maSP), name, quanlity, creaateBy, createDate, note,price);
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(quanlity) || TextUtils.isEmpty(creaateBy) || TextUtils.isEmpty(createDate) || TextUtils.isEmpty(note)) {
                     Toast.makeText(getActivity(), "vui long nhap day du thong tin", Toast.LENGTH_SHORT).show();
                 } else if (billDao.insert(bill)) {
@@ -188,6 +198,7 @@ public class bill_list extends Fragment {
 //            hs.put("name", product.getName());
             hs.put("quantity", product.getQuantity());
             hs.put("userID", product.getUserID());
+            hs.put("price",product.getPrice());
             listHM.add(hs);
         }
         return listHM;
