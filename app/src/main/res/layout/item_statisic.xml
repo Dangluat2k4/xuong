@@ -3,25 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#B5A495"
+    android:gravity="center"
+    android:background="@drawable/khung1"
     >
     <TextView
         android:id="@+id/txtNameST"
-        android:layout_width="400dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@drawable/khung" />
 
     <TextView
         android:id="@+id/txtSoLuongST"
-        android:layout_width="400dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@drawable/khung" />
 
     <TextView
         android:id="@+id/txtGiaST"
-        android:layout_width="400dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@drawable/khung" />
