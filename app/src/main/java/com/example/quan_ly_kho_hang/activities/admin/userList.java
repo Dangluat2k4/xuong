@@ -134,23 +134,29 @@ public class userList extends Fragment implements OnImageSelectedListener {
                 String lastAction = edtAddUserName.getText().toString();
                 // chuyen data cua img sang byte
                 BitmapDrawable drawable = (BitmapDrawable) addIIMG.getDrawable();
+                if (drawable == null) {
+                    // Handle the case where no image is selected
+                    Toast.makeText(getActivity(), "Vui lòng chọn hình ảnh", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Bitmap bitmap = drawable.getBitmap();
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 // chuyen hinh ve
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+
                 // khai bao mang chua du lieu
                 byte[] img = stream.toByteArray();
                 User user = new User(userName, password, numberPhone, position, img, profile, lastLogin, createDate, lastAction);
                 if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password) || TextUtils.isEmpty(numberPhone) || TextUtils.isEmpty(position) || TextUtils.isEmpty(profile) || TextUtils.isEmpty(lastLogin) || TextUtils.isEmpty(lastAction) || TextUtils.isEmpty(createDate)) {
-                    Toast.makeText(getActivity(), "vui long nhap day du thong tin", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else if (userDao.insertUser(user)) {
                     list.clear();
                     list.addAll(userDao.selectAll());
                     adapter.notifyDataSetChanged();
                     dialog.dismiss();
-                    Toast.makeText(getActivity(), "ban da them thanh cong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "bạn đã thêm thành công", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getActivity(), "ban da them that bai", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "bạn đã thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
         });

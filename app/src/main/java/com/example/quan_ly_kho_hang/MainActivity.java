@@ -14,22 +14,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.quan_ly_kho_hang.activities.admin.create_product;
 import com.example.quan_ly_kho_hang.activities.admin.create_user;
 import com.example.quan_ly_kho_hang.activities.admin.doanhthu;
 import com.example.quan_ly_kho_hang.activities.admin.frm_billDetail;
 import com.example.quan_ly_kho_hang.activities.admin.productList;
 import com.example.quan_ly_kho_hang.activities.admin.userList;
 import com.example.quan_ly_kho_hang.activities.bill_list;
-import com.example.quan_ly_kho_hang.activities.create_bill;
 import com.example.quan_ly_kho_hang.activities.login;
 import com.example.quan_ly_kho_hang.activities.statisic;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;

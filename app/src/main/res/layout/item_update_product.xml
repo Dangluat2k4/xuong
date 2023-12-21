@@ -34,7 +34,7 @@
         android:id="@+id/IIMGPR"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:background="#AF7A7A"
+        android:background="#F6E7E7"
         android:layout_gravity="center"
         />
     <Button

@@ -152,6 +152,11 @@ public class productList extends Fragment implements OnImageSelectListtenerPR {
                 String tenUR = (String) hsLS.get("userName");
                 // chuyen data cua img sang byte
                 BitmapDrawable drawable = (BitmapDrawable) IAIMGPR.getDrawable();
+                if (drawable == null) {
+                    // Handle the case where no image is selected
+                    Toast.makeText(getActivity(), "Vui lòng chọn hình ảnh", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Bitmap bitmap = drawable.getBitmap();
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 // chuyen hinh ve
