@@ -36,8 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#009688"
-            android:backgroundTint="#F62D2D"
-            app:itemTextColor="@color/white"
             app:labelVisibilityMode="selected"
             app:menu="@menu/menungang"/>
     </LinearLayout>

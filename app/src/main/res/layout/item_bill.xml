@@ -14,8 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/khung"
-            android:backgroundTint="#FFCACA"
+            android:background="@drawable/khung1"
             android:layout_margin="10sp">
 
             <LinearLayout
@@ -55,7 +54,7 @@
 
                 <TextView
                     android:id="@+id/txtGhiChu"
-                    android:layout_width="170dp"
+                    android:layout_width="160dp"
                     android:layout_height="100dp"
                     android:background="@drawable/khung"
                     android:layout_marginTop="5dp"

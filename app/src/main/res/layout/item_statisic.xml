@@ -5,6 +5,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/khung1"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
     >
     <TextView
         android:id="@+id/txtNameST"
