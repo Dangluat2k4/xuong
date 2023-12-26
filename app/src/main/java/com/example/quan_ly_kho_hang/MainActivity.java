@@ -80,21 +80,25 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.home) {
-                    userList userList = new userList();
-                    replaceFrg(userList);
+                if (item.getItemId() == R.id.billDetail) {
+                    frm_billDetail billDetail = new frm_billDetail();
+                    replaceFrg(billDetail);
+                    setTitle("Bill detail");
                 }
                 if (item.getItemId() == R.id.bill) {
                     bill_list billList = new bill_list();
                     replaceFrg(billList);
+                    setTitle("Bill");
                 }
                 if (item.getItemId() == R.id.productList) {
                     productList productList = new productList();
                     replaceFrg(productList);
+                    setTitle("Product list");
                 }
                 if (item.getItemId() == R.id.user) {
-                    frm_billDetail billDetail = new frm_billDetail();
-                    replaceFrg(billDetail);
+                    userList userList = new userList();
+                    replaceFrg(userList);
+                    setTitle("Người dùng");
                 }
                 return false;
             }
@@ -105,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             Menu menu = nav.getMenu();
             menu.findItem(R.id.createUser).setVisible(false);
             Menu menu1 = bottomNavigationView.getMenu();
-            menu1.findItem(R.id.home).setVisible(false);
+            menu1.findItem(R.id.billDetail).setVisible(false);
 
         }
     }

@@ -3,19 +3,19 @@
 
     <item
         android:id="@+id/bill"
-        android:icon="@drawable/user"
+        android:icon="@drawable/bill"
         android:title="" />
     <item
         android:id="@+id/productList"
         android:icon="@drawable/trend"
         android:title="" />
+
+    <item
+        android:id="@+id/billDetail"
+        android:icon="@drawable/billdetail"
+        android:title="" />
     <item
         android:id="@+id/user"
         android:icon="@drawable/people"
-        android:title="" />
-    <item
-        android:id="@+id/home"
-
-        android:icon="@drawable/baseline_home_24"
         android:title="" />
 </menu>

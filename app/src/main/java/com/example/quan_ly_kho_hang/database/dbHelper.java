@@ -9,7 +9,7 @@ public class dbHelper extends SQLiteOpenHelper {
     private static final String db_name = "QLKH";
 
     public dbHelper(Context context) {
-        super(context, db_name, null, 15);
+        super(context, db_name, null, 16);
     }
 
     @Override
